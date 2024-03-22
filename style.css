@@ -19,7 +19,7 @@
         }
 
         .container {
-    max-width: 40%;
+    max-width: fit-content;
     margin: 0 auto;
     background-color: var(--cont-color);
     padding: 30px;
