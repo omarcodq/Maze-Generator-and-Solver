@@ -14,8 +14,8 @@
                 linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
                 linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
                 var(--dot-color);
-            width:auto;
-            height: fit-content;
+                width:auto;
+                height: fit-content;
         }
 
         .container {
@@ -33,6 +33,7 @@
             z-index: 10;
             overflow-x: auto; /* Add horizontal scroll if necessary */
         }
+        
 
 
         h1 {
@@ -155,7 +156,7 @@ input[type="checkbox"] + label:before {
 /* Style the checkmark */
 input[type="checkbox"]:checked + label:before {
     content: '\2713'; /* Unicode checkmark character */
-    font-size: 16px; /* Size of the checkmark */
+    font-size: 12px; /* Size of the checkmark */
     line-height: 18px; /* To center the checkmark vertically */
     text-align: center;
     color: #333; /* Color of the checkmark */
@@ -165,4 +166,23 @@ input[type="checkbox"]:checked + label:before {
 /* Style the label when checkbox is checked */
 input[type="checkbox"]:checked + label {
     font-weight: bold; /* Make the label bold when checked */
+}
+
+/* Note to be displayed when hovering */
+input[type="checkbox"] + label:after {
+    content: 'if you check this you can see the Generate Maze Visualization'; /* Add your note here */
+    position: absolute;
+    top: -20px; /* Adjust the positioning as needed */
+    left: 25px; /* Adjust the positioning as needed */
+    background-color: #fff;
+    padding: 2px;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+    opacity: 60%;
+    font-size: 13px;
+}
+
+/* Display the note on hover */
+input[type="checkbox"] + label:hover:after {
+    display: block;
 }
