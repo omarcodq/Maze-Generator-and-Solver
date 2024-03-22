@@ -7,7 +7,7 @@ try it here [demo website](https://omarcodq.github.io/Maze-Generator-and-Solver/
 
 
 
-![Demo](https://example.com/demo.gif)
+![Demo](demo.gif)
 
 ## Features
 
