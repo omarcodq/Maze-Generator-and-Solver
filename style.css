@@ -19,19 +19,20 @@
         }
 
         .container {
-    max-width: fit-content;
-    margin: 0 auto;
-    background-color: var(--cont-color);
-    padding: 30px;
-    border-radius: 20px;
-    align-items: center;
-    gap: 30px;
-    backdrop-filter: blur(30px);
-    box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
-                0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
-    z-index: 10;
-    overflow-x: auto; /* Add horizontal scroll if necessary */
-}
+            max-width: 2500px; /* Adjust the maximum width as needed */
+            width: fit-content;
+            margin: 0 auto;
+            background-color: var(--cont-color);
+            padding: 30px;
+            border-radius: 20px;
+            align-items: center;
+            gap: 30px;
+            backdrop-filter: blur(30px);
+            box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+                        0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+            z-index: 10;
+            overflow-x: auto; /* Add horizontal scroll if necessary */
+        }
 
 
         h1 {
