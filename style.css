@@ -1,0 +1,165 @@
+:root {
+            --dot-bg: black;
+            --dot-color: white;
+            --cont-color: white;
+            --dot-size: 1px;
+            --dot-space: 22px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background:
+                linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+                linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+                var(--dot-color);
+        }
+
+        .container {
+    max-width: 40%;
+    margin: 0 auto;
+    background-color: var(--cont-color);
+    padding: 30px;
+    border-radius: 20px;
+    align-items: center;
+    gap: 30px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+                0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+    overflow-x: auto; /* Add horizontal scroll if necessary */
+}
+
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        input[type="number"], input[type="checkbox"] {
+            width: 60px;
+            margin-right: 10px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus, input[type="checkbox"]:focus {
+            outline: none;
+            border-color: #4caf50;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            background-color: #000000;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            color: #000000;
+            background-color: #454545;
+        }
+
+        #maze {
+            display: flex;
+            flex-wrap: wrap;
+            border: 2px solid #000000;
+            margin-top: 20px;
+            background-color: var(--cont-color);;
+        }
+
+        .cell {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            transition: background-color 0.1s;
+        }
+
+        .start {
+            background-color: #6ad23e;
+        }
+
+        .end {
+            background-color: #f44542;
+            z-index: 999;
+        }
+
+        .path {
+            background-color: #ffd500;
+        }
+
+        .wall {
+            background-color: #000000;
+        }
+
+        .current-gen {
+            background-color: #00bcd4;
+        }
+
+        .current-solve {
+            background-color: #2e77ff;
+        }
+
+        .alt-current-solve {
+            background-color: #f00000;
+        }
+        
+        /* Hide the default checkbox */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Style the custom checkbox */
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 25px; /* Space for the custom checkbox */
+    cursor: pointer;
+}
+
+/* Style the custom checkbox itself */
+input[type="checkbox"] + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #333; /* Border color */
+    background-color: #fff; /* Background color */
+}
+
+/* Style the checkmark */
+input[type="checkbox"]:checked + label:before {
+    content: '\2713'; /* Unicode checkmark character */
+    font-size: 16px; /* Size of the checkmark */
+    line-height: 18px; /* To center the checkmark vertically */
+    text-align: center;
+    color: #333; /* Color of the checkmark */
+    background-color: #fff; /* Background color when checked */
+}
+
+/* Style the label when checkbox is checked */
+input[type="checkbox"]:checked + label {
+    font-weight: bold; /* Make the label bold when checked */
+}
