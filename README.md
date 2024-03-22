@@ -3,7 +3,7 @@
 This project is a maze generator and solver implemented in HTML, CSS, and JavaScript. It allows users to generate random mazes of customizable sizes and visualize the process. Additionally, it provides functionality to solve the generated maze and visualize the solution.
 
 ## Demo
-try it here ![website]([https://example.com/demo.gif](https://omarcodq.github.io/Maze-Generator-and-Solver/))
+try it here [demo website](https://omarcodq.github.io/Maze-Generator-and-Solver/)
 
 
 
